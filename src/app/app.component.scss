@@ -1,0 +1,96 @@
+@media (min-width:769px) {
+  .app-layout {
+    height: 100vh;
+    color: #fff;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto 5% 3% 1fr auto;
+    grid-template-areas:
+      "sidebar hero"
+      "sidebar experience"
+      "sidebar project"
+      "sidebar projects"
+      "sidebar footer";
+
+    .sidebar {
+      grid-area: sidebar;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero {
+      grid-area: hero;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .experience {
+      grid-area: experience;
+    }
+
+    h2 {
+      grid-area: project;
+      margin: 0;
+      padding: 0;
+    }
+
+    .projects {
+      grid-area: projects;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+  }
+}
+
+
+@media (max-width: 768px)  {
+  .app-layout {
+    height: 100vh;
+    color: #fff;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero"
+      "sidebar"
+      "experience"
+      "project"
+      "projects"
+      "footer";
+  }
+
+    .sidebar {
+      grid-area: sidebar;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      order: 2;
+    }
+
+    .hero {
+      grid-area: hero;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      order: 1;
+    }
+
+    .experience {
+      grid-area: experience;
+      order: 3;
+    }
+
+    h2 {
+      grid-area: project;
+      margin: 0;
+      padding: 0;
+      order: 4;
+    }
+
+    .projects {
+      grid-area: projects;
+      order: 5;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+}

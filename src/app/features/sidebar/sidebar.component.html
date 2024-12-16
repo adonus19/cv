@@ -1,0 +1,47 @@
+<aside class="sidebar">
+  <div class="profile">
+    <img
+      src="avatar.jpeg"
+      alt="Profile picture_as_pdf"
+      class="avatar"
+    >
+    <h2>Daniel Pogue</h2>
+    <p>Full Stack Developer</p>
+    <p>Mobile Apps</p>
+    <p>Arduino</p>
+  </div>
+
+  <div class="personal">
+    <p>Residence: <span>South Carolina, USA</span></p>
+    <p>City: <span>York</span></p>
+    <p>Age: <span>42</span></p>
+  </div>
+  <div class="skills">
+    @for (skill of codingSkills; track $index) {
+    <div class="skill">
+      <div class="skill-label">
+        <span>{{ skill.language }}</span>
+        <span>{{ skill.percent }}%</span>
+      </div>
+      <div class="progress-bar">
+        <div
+          [id]="$index + 1"
+          class="progress hidden"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+
+    }
+
+  </div>
+
+  <div class="tools">
+    <ul>
+      @for (tool of tools; track $index) {
+      <li><img src="checkmark.svg"> {{ tool }}</li>
+      }
+    </ul>
+  </div>
+</aside>

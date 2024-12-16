@@ -1,0 +1,40 @@
+.stats {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+
+  .stat-item h2 {
+    margin: 0;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    color: #ffcc00;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+
+    .stat-item h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      color: #ffcc00;
+      padding-right: 1rem;
+      font-size: 1.8rem;
+    }
+  }
+}

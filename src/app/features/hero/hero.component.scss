@@ -1,0 +1,46 @@
+.hero {
+  // background: url('../../../../public/diamond.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  padding: 5rem 2rem;
+  background: linear-gradient(45deg, #e7f6f8, #87ceeb, #ffce67, #d72638, #5c6784, #0b132b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  }
+  span {
+    color: #ffcc00;
+    font-family: monospace;
+  }
+
+  .btn-explore {
+    font-weight: bold;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+  }
+
+  .btn-explore:hover {
+    background: #fe9d01;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
