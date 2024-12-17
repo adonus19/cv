@@ -13,5 +13,5 @@ import { ProjectsComponent } from './features/projects/projects.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'simple-cv';
+  title = 'Daniel Pogue';
 }
