@@ -7,7 +7,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, Renderer2 } from '@angula
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent implements AfterViewInit {
+export class SidebarComponent implements OnInit, AfterViewInit {
   codingSkills = [
     { language: 'HTML', percent: 90, animate: 0 },
     { language: 'CSS', percent: 80, animate: 0 },
@@ -20,8 +20,25 @@ export class SidebarComponent implements AfterViewInit {
   ];
 
   tools = ['Git Knowledge', 'ExpressJS', 'AWS', 'Firebase', 'Soft Skills'];
+  age: number = 0;
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
+
+  ngOnInit(): void {
+    const today = new Date();
+    const birthday = new Date('12/16/1982');
+    const years = today.getFullYear() - birthday.getFullYear();
+
+    if (birthday.getMonth() >= today.getMonth()) {
+      if (birthday.getDay() >= today.getDate()) {
+        this.age = years - 1;
+      } else {
+        this.age = years;
+      }
+    } else {
+      this.age = years;
+    }
+  }
 
   ngAfterViewInit(): void {
 

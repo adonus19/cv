@@ -66,7 +66,6 @@ export class ProjectsComponent {
 
     const hiddenElements = this.el.nativeElement.querySelectorAll('.hidden');
     hiddenElements.forEach((el: HTMLElement) => {
-      console.log(el);
       this.renderer.setStyle(el, 'transition-delay', `${delay}ms`);
       observer.observe(el);
       delay -= 100;
